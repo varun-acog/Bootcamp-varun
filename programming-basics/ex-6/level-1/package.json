@@ -1,0 +1,12 @@
+{
+  "name": "yaml-config-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "config": "^3.3.12",
+    "winston": "^3.17.0"
+  }
+}

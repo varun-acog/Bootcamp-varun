@@ -1,0 +1,139 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.layout {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        "header header header"
+        "sidebar-left main sidebar-right"
+        "footer footer footer";
+    grid-template-rows: minmax(100px, auto) 1fr minmax(50px, auto);
+    grid-template-columns: minmax(200px, 1fr) minmax(300px, 2fr) minmax(200px, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: #0c0c0c;
+}
+
+header {
+    grid-area: header;
+    background-color: #f4f7fa;
+    color: rgb(33, 33, 33);
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.sidebar-left {
+    grid-area: sidebar-left;
+    background-color: #393c39;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.sidebar-left h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+main {
+    grid-area: main;
+    background-color: #d9534f;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+main ul {
+    margin-left: 20px;
+}
+
+.sidebar-right {
+    grid-area: sidebar-right;
+    background-color: #393c39;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar-right h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #292b2c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul, ol {
+    padding: 0;
+    list-style-position: inside;
+    line-height: 1.8;
+}
+
+@media (max-width: 1200px) {
+    .layout {
+        grid-template-columns: minmax(250px, 1fr) minmax(250px, 2fr);
+        grid-template-areas:
+            "header header"
+            "sidebar-left main"
+            "footer footer";
+    }
+
+    .sidebar-left, .sidebar-right {
+        padding: 8px;
+    }
+
+    main {
+        padding: 10px;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar-left"
+            "sidebar-right"
+            "footer";
+    }
+
+    header {
+        font-size: 1.2rem;
+    }
+
+    main h2 {
+        font-size: 1.6rem;
+    }
+
+    .sidebar-left, .sidebar-right {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}

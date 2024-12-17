@@ -1,0 +1,15 @@
+{
+  "name": "debug-multi-modules",
+  "version": "1.0.0",
+  "dependencies": {
+    "debug": "^4.4.0",
+    "readline-sync": "^1.4.10",
+    "winston": "^3.17.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "debug:module1": "DEBUG=module1:* node index.js",
+    "debug:module2": "DEBUG=module2:* node index.js",
+    "debug:both": "DEBUG=module1:*,module2:* node index.js"
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Layout</title>
+  </head>
+  <body>
+    <h1>CSS Grid Layout</h1>
+    <section>
+      <h2>My approach:</h2>
+      <p>
+        To create a header, two sidebars and the main content, first I have set
+        the layout of my display to grid.
+      </p>
+      <p>
+        To arrange the content, I have used grid-template-areas so that I can
+        differentiate between header, sidebars and the main content.
+      </p>
+      <p>
+        Used grid-template-columns and grid-template-rows to arrange them by
+        applying minmax() and providing certain sizing to each of them.
+      </p>
+    </section>
+    <section>
+      <h2>Key Features Used</h2>
+      <ul>
+        <li>
+          <strong>grid-template-areas:</strong> Defined a structured layout with
+          named areas for header, sidebars, and main content.
+        </li>
+        <li>
+          <strong>minmax():</strong> Used for rows and columns to create
+          flexible and responsive sizing.
+        </li>
+        <li>
+          <strong>Media Queries:</strong> Adjusted grid layout for mobile
+          screens by stacking areas vertically.
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Strategies used</h2>
+      <ul>
+        <li>Ensured consistent layout scaling using fractional units (fr).</li>
+        <li>
+          Handled overflow in the main content area with
+          <code>overflow: auto;</code>.
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Challenges</h2>
+      <ul>
+        <li>Balancing content alignment and spacing in narrow viewports.</li>
+      </ul>
+    </section>
+  </body>
+</html>

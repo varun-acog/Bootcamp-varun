@@ -1,0 +1,119 @@
+:root {
+    --high-bg: #1b1f3b;
+    --high-text: #ffffff;
+  
+    --moderate-bg: #5c6ac4;
+    --moderate-text: #f3f3f3;
+  
+    --low-bg: #eaeaea;
+    --low-text: #bababa;
+  
+    --high-color-bg: #e63946;
+    --high-color-text: #f1faee;
+  
+    --main-font: "Roboto", sans-serif;
+    --header-shadow: rgba(0, 0, 0, 0.3);
+    --box-shadow: rgba(0, 0, 0, 0.15);
+    --footer-bg: #1d3557;
+    --footer-text: #f4f4f9;
+  }
+  
+  body {
+    font-family: var(--main-font);
+    margin: 0;
+    padding: 0;
+    background-color: var(--high-bg);
+    color: var(--high-text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--high-bg), var(--high-color-bg));
+    color: var(--high-text);
+    box-shadow: 0 8px 15px var(--header-shadow);
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+  }
+  
+  .contrast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  .contrast-box {
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--high-text);
+    box-shadow: 0 4px 10px var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contrast-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .contrast-box p {
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  
+  .high-contrast {
+    background-color: var(--high-bg);
+    color: var(--high-text);
+    border: 2px solid var(--high-text);
+  }
+  
+ 
+  .moderate-contrast {
+    background-color: var(--moderate-bg);
+    color: var(--moderate-text);
+    border: 2px solid var(--moderate-text);
+  }
+  
+ 
+  .low-contrast {
+    background-color: var(--low-bg);
+    color: var(--low-text);
+    border: 2px solid var(--low-text);
+  }
+  
+ 
+  .high-color-contrast {
+    background-color: var(--high-color-bg);
+    color: var(--high-color-text);
+    border: 2px solid var(--high-color-text);
+  }
+  
+  
+  .contrast-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px var(--box-shadow);
+  }
+  
+  
+  footer {
+    background-color: var(--footer-bg);
+    text-align: center;
+    padding: 15px;
+    color: var(--footer-text);
+    font-size: 0.9em;
+  }
+  

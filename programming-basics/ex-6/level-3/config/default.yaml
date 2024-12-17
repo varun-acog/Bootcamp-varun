@@ -1,0 +1,20 @@
+app:
+  name: "Dynamic Function Loader"
+  environment: "default"
+  port: 3000
+
+logger:
+  level: "info"
+
+commands:
+  - name: "sin"
+    description: "Calculate sine of a number"
+    file: "./functions/mathFunctions.js"
+    function: "calculateSin"
+
+  - name: "cos"
+    description: "Calculate cosine of a number"
+    file: "./functions/mathFunctions.js"
+    function: "calculateCos"
+
+additionalMessage: "You can dynamically extend functionality using configuration."

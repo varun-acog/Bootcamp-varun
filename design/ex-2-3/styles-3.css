@@ -1,0 +1,112 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a6c6f, #e3f2fd);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 900px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-item {
+    text-align: center;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    transform: translateY(-3px);
+    color: #007bff;
+  }
+  
+  .icon {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+    transition: fill 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-link:hover .icon {
+    fill: #007bff;
+    transform: scale(1.1);
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn .icon {
+    fill: #fff;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(45deg, #0056b3, #007bff);
+    transform: scale(1.05);
+  }
+  
+  .btn-download {
+    background: linear-gradient(45deg, #2846a7, #0b7760);
+  }
+  
+  .btn-download:hover {
+    background: linear-gradient(45deg, #0e9191, #28a745);
+  }
+  
+  .btn-upload {
+    background: linear-gradient(45deg, #1f1273, #90338e);
+  }
+  
+  .btn-upload:hover {
+    background: linear-gradient(45deg, #672e73, #590c5d);
+  }
+  

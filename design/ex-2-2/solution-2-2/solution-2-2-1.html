@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fun CSS Page - Three Color Scheme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="theme-link" rel="stylesheet" href="light-2-2-1.css" />
+    <style>
+      .theme-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="main-header">
+        <h1>Fun Facts and Giggles</h1>
+        <h2>Your daily dose of fun and trivia!</h2>
+        <a href="#" class="main-link">Click here for more fun!</a>
+      </header>
+
+      <section class="intro">
+        <p>
+          Welcome to a page that combines humor and style. Sit back, relax, and
+          enjoy the content!
+        </p>
+
+        <div class="card">
+          <h3>Why don’t skeletons fight each other?</h3>
+          <p>Because they don’t have the guts! 🦴</p>
+          <button>More Skeleton Jokes</button>
+        </div>
+
+        <div class="card">
+          <h3>Did you know?</h3>
+          <p>
+            Octopuses have three hearts. Two pump blood to the gills, and one
+            pumps it to the rest of the body. That's a lot of love to give! 🐙
+          </p>
+          <button>More Facts</button>
+        </div>
+
+        <div class="card">
+          <h3>Tech Joke</h3>
+          <p>
+            Why do programmers prefer dark mode? Because light attracts bugs!
+            🐞💻
+          </p>
+          <button>More Tech Jokes</button>
+        </div>
+      </section>
+
+      <footer>
+        <p>Made with love for fun and learning. Keep smiling! 😊</p>
+      </footer>
+    </div>
+
+    <div class="theme-toggle">
+      <button onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+
+    <script>
+      function toggleTheme() {
+        const themeLink = document.getElementById("theme-link");
+        if (themeLink.getAttribute("href") === "light-2-2-1.css") {
+          themeLink.setAttribute("href", "dark-2-2-1.css");
+        } else {
+          themeLink.setAttribute("href", "light-2-2-1.css");
+        }
+      }
+    </script>
+  </body>
+</html>

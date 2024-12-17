@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .centered-block {
+    width: clamp(300px, 50%, 800px);
+    padding: 3vh 5vw;
+    background-color: #2f7ec8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .centered-block h1 {
+    font-size: max(1.5rem, min(3vw, 4rem));
+    color: #1d1c1c;
+    margin-bottom: 1vh;
+  }
+  
+  .centered-block p {
+    font-size: min(2rem, max(1rem, 1.5vw));
+    color: #252424;
+  }
+  

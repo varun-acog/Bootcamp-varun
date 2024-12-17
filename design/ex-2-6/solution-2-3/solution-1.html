@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRCTC Redesign</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #eff6ff, #dbeafe);
+        color: #1e293b;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 5%;
+        background: #2563eb;
+        color: white;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+      }
+      .nav-links a:hover {
+        color: orange;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 50px 5%;
+        background: linear-gradient(135deg, #dbeafe, #eff6ff);
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+      }
+
+      .search-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 30px;
+      }
+
+      .search-form input,
+      .search-form select,
+      .search-form button {
+        padding: 10px 15px;
+        font-size: 1rem;
+        border: 1px solid #2563eb;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      .search-form button {
+        background: #2563eb;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .features {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 50px 5%;
+        background: #eff6ff;
+      }
+
+      .feature {
+        text-align: center;
+        max-width: 250px;
+      }
+      .feature:hover {
+        transform: scale(1.1);
+      }
+
+      .feature h3 {
+        margin-bottom: 10px;
+      }
+      .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        flex-wrap: wrap;
+        margin: 20px;
+        max-width: 1200px;
+      }
+
+      .card {
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        max-width: 350px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .card-content h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .card-content p {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+        text-align: left;
+      }
+
+      .card-content a {
+        display: inline-block;
+        margin-top: 15px;
+        color: #0078ff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      .card-content a:hover {
+        color: #0056b3;
+      }
+
+      .read-more-icon {
+        margin-left: 5px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 1200px) {
+        .card-container {
+          flex-direction: row;
+          gap: 20px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .card-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .footer {
+        background-color: #2a1c55;
+        color: #fff;
+        padding: 20px 10%;
+        font-size: 14px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+      }
+
+      .footer-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .footer-link {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-link:hover {
+        color: #f3d250;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="https://www.irctc.co.in/nget/assets/images/secondry-logo.png"
+          alt="IRCTC logo"
+        />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">My Bookings</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Meals</a></li>
+        <li><a href="#">BUSES</a></li>
+        <li><a href="#">IRCTC e-wallet</a></li>
+        <li><a href="#">Promotions</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div class="logo">
+        <img
+          src="https://www.irctc.co.in/nget/assets/images/logo.png"
+          alt="IRCTC logo"
+        />
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Welcome to IRCTC</h1>
+      <p>Plan your journey, book tickets, and travel effortlessly.</p>
+      <form class="search-form">
+        <input type="text" placeholder="From" />
+        <input type="text" placeholder="To" />
+        <input type="date" />
+        <input type="number" placeholder="Passengers" min="1" />
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <i class="fas fa-train"></i>
+        <h3>E-Ticketing</h3>
+        <p>Book train tickets with ease and enjoy a hassle-free journey.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-utensils"></i>
+        <h3>Onboard Catering</h3>
+        <p>Enjoy delicious meals delivered directly to your seat.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-chair"></i>
+        <h3>Seat Availability</h3>
+        <p>Check seat availability and plan your trips effectively.</p>
+      </div>
+    </section>
+
+    <div class="card-container">
+      <div class="card">
+        <img
+          src="https://www.the-maharajas.com/assets/img/photo_gallery/Mayur-mahal.jpg"
+          alt="Maharajas' Express"
+        />
+        <div class="card-content">
+          <h2>Maharajas' Express</h2>
+          <p>
+            Redefining royalty, luxury, and comfort, the Maharajas' Express
+            takes you on a journey to experience princely states with unmatched
+            elegance and modern amenities.
+          </p>
+          <a href="#">Read More <span class="read-more-icon">➜</span></a>
+        </div>
+      </div>
+
+      <!-- International Packages -->
+      <div class="card">
+        <img
+          src="https://media.istockphoto.com/id/530450181/photo/nepal.webp?a=1&b=1&s=612x612&w=0&k=20&c=aT6jF-v9PJKBWnK2E0WwiMWj0tB9dSxbL6bbI6tmKbU="
+          alt="International Packages"
+        />
+        <div class="card-content">
+          <h2>International Packages</h2>
+          <p>
+            Explore the best international holiday deals for Thailand, Dubai,
+            Sri Lanka, Europe, USA, Australia, and more with inclusive
+            sightseeing and insurance.
+          </p>
+          <a href="#">Read More <span class="read-more-icon">➜</span></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1548013146-72479768bada?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGluZGlhfGVufDB8fDB8fHww"
+          alt="Domestic Air Packages"
+        />
+        <div class="card-content">
+          <h2>Domestic Air Packages</h2>
+          <p>
+            Travel to serene locations like North East, Rajasthan, Ladakh, and
+            the Himalayas. Discover the beauty of India with IRCTC's domestic
+            air packages.
+          </p>
+          <a href="#">Read More <span class="read-more-icon">➜</span></a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <span class="footer-title">IRCTC Trains</span>
+          <a href="#" class="footer-link">General Information</a>
+          <a href="#" class="footer-link">Important Information</a>
+          <a href="#" class="footer-link">Agents</a>
+          <a href="#" class="footer-link">Enquiries</a>
+        </div>
+        <div class="footer-column">
+          <span class="footer-title">How To</span>
+          <a href="#" class="footer-link">IRCTC Official App</a>
+          <a href="#" class="footer-link">Advertise with us</a>
+          <a href="#" class="footer-link">Refund Rules</a>
+          <a href="#" class="footer-link">Person With Disability Facilities</a>
+        </div>
+        <div class="footer-column">
+          <span class="footer-title">IRCTC eWallet</span>
+          <a href="#" class="footer-link">Avail Loyalty Benefits</a>
+          <a href="#" class="footer-link">IRCTC-iPAY Payment Gateway</a>
+          <a href="#" class="footer-link">IRCTC Zone</a>
+          <a href="#" class="footer-link">DMRC Ticket Booking at IRCTC</a>
+        </div>
+        <div class="footer-column">
+          <span class="footer-title">For Newly Migrated Agents</span>
+          <a href="#" class="footer-link">Mobile Zone</a>
+          <a href="#" class="footer-link">Policies</a>
+          <a href="#" class="footer-link">Ask Disha ChatBot</a>
+        </div>
+        <div class="footer-column">
+          <span class="footer-title">Help & Support</span>
+          <a href="#" class="footer-link">About Us</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

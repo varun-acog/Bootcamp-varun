@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Images Exercise Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+    h2 {
+      font-size: 1.5rem;
+      color: #555;
+    }
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    p {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Images Exercise Notes</h1>
+
+  <h2>Level 1: Basics of Images</h2>
+  <h3>Approach:</h3>
+  <ul>
+    <li>Added three images to a webpage using the `<img>` tag.</li>
+    <li>Styled the images with CSS properties such as `width`, `height`, and `border-radius` to make the images visually appealing.</li>
+    <li>Used a placeholder image service (Lorem Picsum) to generate one of the images.</li>
+  </ul>
+  <h3>Key Learnings:</h3>
+  <ul>
+    <li>Understanding the differences between image formats: JPEG (lossy compression), PNG (lossless, transparency), and SVG (scalable vector graphics).</li>
+    <li>CSS allows for basic customization of image properties to control their size, shape, and layout.</li>
+    <li>Placeholder image services are helpful for rapid prototyping.</li>
+  </ul>
+  <h3>Challenges Faced:</h3>
+  <ul>
+    <li>Ensuring images maintained aspect ratios when resized.</li>
+    <li>Choosing appropriate dimensions to balance quality and loading performance.</li>
+  </ul>
+
+  <h2>Level 2: Advanced Image Styling</h2>
+  <h3>Approach:</h3>
+  <ul>
+    <li>Edited an image using a tool like Photoshop to reduce its size and compress it for faster loading.</li>
+    <li>Added a full-bleed image to the top of the page as a header using CSS properties like `width: 100%` and `object-fit: cover`.</li>
+    <li>Used CSS overlays, including gradient and color tint, on images to enhance their visual appeal and improve text readability.</li>
+  </ul>
+  <h3>Key Learnings:</h3>
+  <ul>
+    <li>Compression and resizing significantly reduce image load times without noticeable quality loss.</li>
+    <li>Full-bleed images create an immersive effect, especially when paired with overlay techniques.</li>
+    <li>CSS gradients can enhance images for aesthetic purposes and improve readability of overlaid text.</li>
+  </ul>
+  <h3>Challenges Faced:</h3>
+  <ul>
+    <li>Maintaining image quality while compressing files for performance optimization.</li>
+    <li>Ensuring the full-bleed image looked consistent across devices and resolutions.</li>
+  </ul>
+
+  <h2>Level 3: Responsive Images and Optimization</h2>
+  <h3>Approach:</h3>
+  <ul>
+    <li>Implemented responsive images using the `<picture>` element to serve different versions of an image based on screen size.</li>
+    <li>Created high-resolution and low-resolution versions of an image for different devices.</li>
+    <li>Used lazy loading for images to improve initial page load speed by only loading images when they are about to appear in the viewport.</li>
+  </ul>
+  <h3>Key Learnings:</h3>
+  <ul>
+    <li>The `<picture>` element and `srcset` attribute are powerful tools for delivering device-specific images.</li>
+    <li>Lazy loading improves performance, especially on pages with multiple images, by reducing the initial load time.</li>
+    <li>Optimizing images for different devices is essential for maintaining a balance between quality and performance.</li>
+  </ul>
+  <h3>Challenges Faced:</h3>
+  <ul>
+    <li>Creating multiple image versions and ensuring correct fallback behavior for older browsers.</li>
+    <li>Testing lazy loading behavior across different browsers and devices.</li>
+    <li>Balancing performance optimization with the need for high-quality visuals on retina displays.</li>
+  </ul>
+
+  
+</body>
+</html>

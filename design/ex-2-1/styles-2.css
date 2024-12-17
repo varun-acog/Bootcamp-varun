@@ -1,0 +1,27 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: bisque;
+}
+
+.drop-cap span {
+    float: left;
+    font-size: 3em;
+    margin-right: 10px;
+    line-height: 1;
+}
+.text-shadow {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.text-mask {
+    font-size: 4em;
+    font-weight: bold;
+    background: url('https://images.unsplash.com/photo-1733759884137-dbf138cafc1c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8') no-repeat center;
+    background-size: cover;
+    -webkit-background-clip:  text;
+    -webkit-text-fill-color: transparent;
+}
+
+p:hover {
+    font-variation-settings: 'wght' 700;
+}

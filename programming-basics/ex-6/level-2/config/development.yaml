@@ -1,0 +1,15 @@
+app:
+  environment: "development"
+  port: 3001
+
+database:
+  user: "dev_user"
+  password: "dev_password"
+  dbName: "dev_db"
+
+logger:
+  level: "debug"
+
+api:
+  key: "dev-api-key"
+  url: "https://dev.example.com"

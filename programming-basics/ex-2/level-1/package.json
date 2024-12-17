@@ -1,0 +1,12 @@
+{
+  "name": "programming-basics",
+  "version": "1.0.0",
+  "description": "Sum calculator",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

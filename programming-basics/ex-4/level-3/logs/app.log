@@ -1,0 +1,8 @@
+{"level":"info","message":"Program started: Interactive compute program"}
+{"level":"info","message":"User input received: a=5, b=6, operation=add"}
+{"level":"info","message":"Addition performed: 5 + 6 = 11"}
+{"level":"info","message":"Calculation result: 11"}
+{"level":"info","message":"Program started: Interactive compute program"}
+{"level":"info","message":"User input received: a=8, b=4, operation=multiply"}
+{"level":"info","message":"Multiplication performed: 8 * 4 = 32"}
+{"level":"info","message":"Calculation result: 32"}

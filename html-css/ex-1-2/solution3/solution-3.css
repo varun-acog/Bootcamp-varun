@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: var(--body-font-size, 16px); 
+    margin: var(--spacing, 1rem); 
+    background-color: var(--background-color, var(--background-color-light)); 
+    color: var(--text-color, var(--text-color-light)); 
+}
+
+header {
+    background-color: var(--primary-color, blue); 
+    color: white;
+    text-align: center;
+    padding: var(--spacing, 1rem);
+    margin-bottom: var(--spacing, 1rem);
+}
+
+
+nav {
+    background-color: var(--secondary-color, gray); 
+    color: white;
+    padding: var(--spacing, 1rem);
+    margin-bottom: var(--spacing, 1rem);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 0.5rem;
+}
+
+nav ul li a {
+    color: var(--link-color, var(--link-color-light)); 
+    text-decoration: none;
+}
+nav ul li a, aside ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+aside {
+    background-color: var(--secondary-color, gray);
+    color: white;
+    padding: var(--spacing, 1rem);
+    margin-bottom: var(--spacing, 1rem);
+}
+nav ul, aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+main {
+    margin-bottom: var(--spacing, 1rem);
+}
+
+main h2 {
+    font-size: var(--header-font-size, 2rem);
+    color: var(--secondary-color, gray);
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    margin: var(--spacing, 1rem) 0;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--spacing, 1rem) 0;
+}
+
+table th, table td {
+    border: 1px solid var(--primary-color, black);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--primary-color, blue);
+    color: white;
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--table-alt-row-color, #f0f0f0);
+}
+
+table tr:nth-child(even) {
+    background-color: white;
+}
+
+footer {
+    background-color: var(--primary-color, blue);
+    color: white;
+    text-align: center;
+    padding: var(--spacing, 1rem);
+    margin-top: var(--spacing, 1rem);
+}
+
+#theme-toggle-btn {
+    background-color: var(--primary-color, teal);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 20px;
+}

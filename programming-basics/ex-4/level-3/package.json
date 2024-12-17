@@ -1,0 +1,17 @@
+{
+  "name": "debug-winston-compute",
+  "version": "1.0.0",
+  "description": "Interactive compute program with debug and structured logging",
+  "main": "app.js",
+  "dependencies": {
+    "debug": "^4.4.0",
+    "readline-sync": "^1.4.10",
+    "winston": "^3.17.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "debug": "DEBUG=app:debug node index.js"
+  },
+  "author": "Varun",
+  "license": "ISC"
+}

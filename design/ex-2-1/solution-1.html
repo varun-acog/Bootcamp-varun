@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CSS Zen Garden: The Beauty of CSS Design</title>
+
+    <link rel="stylesheet" media="screen" href="style.css?v=8may2013" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .font-regular {
+        font-weight: 400;
+      }
+      .font-bold {
+        font-weight: 700;
+      }
+      .font-light {
+        font-weight: 300;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .font-serif {
+        font-family: "Times New Roman", Times, serif;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body id="css-zen-garden">
+    <div class="page-wrapper">
+      <section class="intro" id="zen-intro">
+        <header role="banner">
+          <h1 class="font-regular">CSS Zen Garden</h1>
+          <h2 class="font-bold">
+            The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design
+          </h2>
+        </header>
+
+        <div class="summary font-light" id="zen-summary" role="article">
+          <p>
+            This text is styled with a light font weight and a monospace font
+            family.
+          </p>
+          <p class="font-serif">
+            This paragraph uses a serif font and medium weight.
+          </p>
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const summary = document.getElementById("zen-summary");
+          const newPara = document.createElement("p");
+          newPara.textContent =
+            "This paragraph was added dynamically using JavaScript.";
+          newPara.style.color = "blue";
+          summary.appendChild(newPara);
+          console.log("Dynamic content has been added.");
+        });
+      </script>
+    </div>
+  </body>
+</html>

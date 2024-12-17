@@ -1,0 +1,15 @@
+app:
+  environment: "production"
+  port: 8080
+
+database:
+  user: "prod_user"
+  password: "prod_password"
+  dbName: "prod_db"
+
+logger:
+  level: "error"
+
+api:
+  key: "prod-api-key"
+  url: "https://api.example.com"

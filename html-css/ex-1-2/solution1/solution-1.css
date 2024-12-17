@@ -1,0 +1,91 @@
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: var(--body-font-size);
+    margin: var(--margin-spacing);
+    line-height: 1.6;
+    color: var(--primary-color);
+}
+
+/* Header Styling */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--margin-spacing);
+    margin-bottom: var(--margin-spacing);
+}
+
+h1 {
+    font-size: var(--header-font-size);
+    margin: 0;
+}
+
+
+nav, aside {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--margin-spacing);
+    margin-bottom: var(--margin-spacing);
+}
+
+nav ul, aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li, aside ul li {
+    margin-bottom: 0.5rem;
+}
+
+nav ul li a, aside ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+main {
+    margin-bottom: var(--margin-spacing);
+}
+
+main h2 {
+    font-size: calc(var(--header-font-size) - 0.5rem);
+    color: var(--secondary-color);
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    margin: var(--margin-spacing) 0;
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--margin-spacing) 0;
+}
+
+table th, table td {
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+table td {
+    background-color: #e7e2e2;
+}
+
+
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--margin-spacing);
+    margin-top: var(--margin-spacing);
+}

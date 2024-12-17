@@ -1,0 +1,14 @@
+{
+  "name": "structured-logging",
+  "version": "1.0.0",
+  "description": "Implementing structured logging using winston library",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "winston": "^3.17.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

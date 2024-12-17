@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Images with Lazy Loading</title>
+    <link rel="stylesheet" href="styles-3.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>Responsive Images with Lazy Loading</h1>
+      <p>
+        Optimize images for various devices and enhance performance with lazy
+        loading.
+      </p>
+    </header>
+
+    <main>
+      <section class="image-section">
+        <h2>Responsive Image Example</h2>
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://plus.unsplash.com/premium_photo-1689609950097-1e6b05dfdba6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8
+            "
+          />
+
+          <source
+            media="(max-width: 1024px)"
+            srcset="
+              https://images.unsplash.com/photo-1523395147355-9ded3539f60d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRhYmxldCUyMHdhbGxwYXBlcnN8ZW58MHx8MHx8fDA%3D
+            "
+          />
+
+          <source
+            media="(min-width: 1024px)"
+            srcset="
+              https://images.unsplash.com/photo-1732398171679-b0dbcf2204e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzOXx8fGVufDB8fHx8fA%3D%3D
+            "
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1733871550599-f0cd93dea191?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0MXx8fGVufDB8fHx8fA%3D%3D"
+            alt="Responsive Image"
+            loading="lazy"
+          />
+        </picture>
+        <p>
+          This image will adapt based on the screen size of the device. Low-res
+          for mobile, medium for tablets, and high-res for desktop.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Images were taken from unspalsh</p>
+    </footer>
+  </body>
+</html>

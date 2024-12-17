@@ -1,0 +1,14 @@
+{
+  "name": "level-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "prestart": "if [ ! -d node_modules ]; then echo 'node_modules missing, reinstalling...' && npm install; fi",
+  "start": "node index.js",
+  "dev": "nodemon index.js"
+   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

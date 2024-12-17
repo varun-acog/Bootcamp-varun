@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(245, 195, 195);
+}
+@font-face {
+    font-family: 'Geist';
+    src: url(../../../../../../mnt/chromeos/archive/Geist-v1.4.01.zip/Geist-v1.4.01/webfonts/Geist-Bold.woff2) format('woff2'),
+         url(../../../../../../mnt/chromeos/archive/Geist-v1.4.01.zip/Geist-v1.4.01/webfonts/Geist-Regular.woff2) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,18 @@
+app:
+  name: "YAML Config Application"
+  port: 3000
+  environment: development
+
+database:
+  host: "localhost"
+  port: 5432
+  user: "app_user"
+  password: "bootcamp"
+  dbName: "mydatabase"
+
+api:
+  key: "api-secure-key-12345"
+  url: "https://api.example.com"
+
+logger:
+  level: "info"

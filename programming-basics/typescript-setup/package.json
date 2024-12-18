@@ -1,22 +1,26 @@
 {
   "name": "typescript-setup",
   "version": "1.0.0",
-  "type": "module",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node -r tsconfig-paths/register dist/index.js"
+  "lint": "eslint src/**/*.ts",
+  "format": "prettier --write src/**/*.ts",
+  "start": "ts-node -r tsconfig-paths/register src/index.ts"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "typescript": "^4.5.0",
-    "tsconfig-paths": "^3.9.0",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "eslint": "^8.0.0",
-    "eslint-config-prettier": "^8.0.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.5.0"
-  },
-  "dependencies": {
-    "tsconfig-paths": "^3.9.0"
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.7.2"
   }
 }

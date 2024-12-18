@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(120deg, #7888ba, #bab0ec) fixed;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 2rem;
+        background-color: #007bff;
+        color: #fff;
+        margin: 0;
+      }
+
+      button {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 15px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      button:hover {
+        transform: scale(1.05);
+      }
+      button:active {
+        transform: scale(1);
+      }
+      button:first-of-type {
+        background-color: #9f3984;
+        color: #fff;
+      }
+      button:first-of-type:hover {
+        background-color: #7d0d7a;
+      }
+      button:last-of-type {
+        background-color: #17a2b8;
+        color: #fff;
+      }
+      button:last-of-type:hover {
+        background-color: #138496;
+      }
+
+      table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      table thead {
+        background-color: #007bff;
+        color: #fff;
+      }
+      table th,
+      table td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+      table tbody tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+      table tbody tr:hover {
+        background-color: #f1f3f5;
+      }
+      .highlight {
+        background-color: #ffc107 !important;
+        color: #212529 !important;
+        font-weight: bold;
+      }
+
+      #browserInfo {
+        margin: 20px auto;
+        padding: 15px;
+        width: 80%;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student Management Dashboard</h1>
+    <div style="text-align: center">
+      <button onclick="addStudent()">Add Student</button>
+      <button onclick="changeFont()">Change Font</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody id="studentTableBody"></tbody>
+    </table>
+    <div id="browserInfo"></div>
+    <script>
+      function addStudent() {
+        const tableBody = document.getElementById("studentTableBody");
+        const row = document.createElement("tr");
+        row.classList.add("highlight");
+        row.innerHTML = `<td>1</td><td>Varun</td><td>23</td><td>A</td>`;
+
+        tableBody.appendChild(row);
+        setTimeout(() => row.classList.remove("highlight"), 2000);
+      }
+
+      function changeFont() {
+        const link = document.createElement("link");
+        link.href =
+          "https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap";
+        link.rel = "stylesheet";
+        document.head.appendChild(link);
+        document.querySelector("table").style.fontFamily =
+          '"Roboto", sans-serif';
+      }
+
+      function displayBrowserInfo() {
+        const browserInfoDiv = document.getElementById("browserInfo");
+        browserInfoDiv.innerHTML = `
+                <p><strong>Browser Name:</strong> ${navigator.appName}</p>
+                <p><strong>Browser Version:</strong> ${navigator.appVersion}</p>
+                <p><strong>Window Dimensions:</strong> ${window.innerWidth} x ${window.innerHeight}</p>
+                <p><strong>User Agent:</strong> ${navigator.userAgent}</p>
+            `;
+      }
+
+      displayBrowserInfo();
+    </script>
+  </body>
+</html>

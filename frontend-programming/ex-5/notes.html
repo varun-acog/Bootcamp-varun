@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chrome DevTools Exploration Notes</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      h1 {
+        color: #333;
+      }
+      h2 {
+        color: #444;
+      }
+      p {
+        color: #555;
+        line-height: 1.6;
+      }
+      ul {
+        margin-top: 10px;
+      }
+      li {
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chrome DevTools Exploration Notes</h1>
+
+    <h2>Objective:</h2>
+    <p>
+      Learn to use Chrome DevTools to debug, analyze, and optimize front-end
+      code.
+    </p>
+
+    <h2>Steps:</h2>
+
+    <h3>1. Console and Errors:</h3>
+    <ul>
+      <li>Open Chrome DevTools by pressing F12 or Ctrl+Shift+I.</li>
+      <li>
+        Use <code>console.log()</code> to print debugging information and
+        explore variable values in the Console tab.
+      </li>
+      <li>
+        Trigger an intentional error (e.g., a missing element) to observe the
+        error in the Console tab.
+      </li>
+    </ul>
+
+    <h3>2. Network Activity:</h3>
+    <ul>
+      <li>
+        Load a JSON or CSV file dynamically in your project (from previous
+        exercises, like Exercise 1 or 3).
+      </li>
+      <li>
+        Open the Network tab in DevTools and observe the request details,
+        including:
+      </li>
+      <ul>
+        <li>Status codes (e.g., 200 for success, 404 for not found).</li>
+        <li>Request and response headers.</li>
+        <li>Time taken for the resource to load.</li>
+      </ul>
+    </ul>
+
+    <h3>3. Elements and Styles:</h3>
+    <ul>
+      <li>Inspect a dynamically added table row (e.g., from Exercise 1).</li>
+      <li>
+        Use the Elements tab to modify its CSS in real-time (e.g., change its
+        background color).
+      </li>
+      <li>
+        Observe how changes are applied immediately in the browser window.
+      </li>
+    </ul>
+
+    <h3>4. Performance Metrics:</h3>
+    <ul>
+      <li>Use the Performance tab to record and analyze the page load time.</li>
+      <li>
+        Identify bottlenecks, such as slow-loading resources or JavaScript
+        execution, and suggest optimization strategies.
+      </li>
+    </ul>
+  </body>
+</html>

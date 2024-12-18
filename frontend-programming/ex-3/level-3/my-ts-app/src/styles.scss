@@ -1,0 +1,11 @@
+/* src/styles.scss */
+@mixin generate-margins($max) {
+    @for $i from 1 through $max {
+      .m-#{$i} {
+        margin: $i * 2px;
+      }
+    }
+  }
+  
+  @include generate-margins(8);
+  

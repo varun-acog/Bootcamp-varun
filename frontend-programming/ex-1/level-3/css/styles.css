@@ -1,0 +1,29 @@
+body {
+    font-family: "Varela Round", sans-serif;
+    margin: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th,
+  td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  .highlight {
+    background-color: #e0ffe0;
+    border: 2px solid #4caf50;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Papers Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dark-theme">
+    <header class="header">
+      <h1>Research Papers Explorer</h1>
+      <input
+        type="text"
+        id="search"
+        placeholder="Search research papers..."
+        oninput="handleSearch()"
+      />
+    </header>
+
+    <section class="filters">
+      <div class="filter-group">
+        <label for="author-filter">Author</label>
+        <input
+          type="text"
+          id="author-filter"
+          placeholder="Filter by author"
+          oninput="applyFilters()"
+        />
+      </div>
+      <div class="filter-group">
+        <label for="title-filter">Title</label>
+        <input
+          type="text"
+          id="title-filter"
+          placeholder="Filter by title"
+          oninput="applyFilters()"
+        />
+      </div>
+      <div class="filter-group">
+        <label for="year-filter">Year Range</label>
+        <input
+          type="range"
+          id="year-filter"
+          min="2000"
+          max="2023"
+          step="1"
+          oninput="updateYearFilter()"
+        />
+        <span id="year-display">2023</span>
+      </div>
+      <button onclick="exportData()">Export Filtered Data</button>
+    </section>
+
+    <section class="cards" id="cards-container">
+      <!-- Cards will be populated here -->
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

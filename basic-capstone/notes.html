@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Paper Explorer - Notes</title>
+    <link rel="stylesheet" href="https://classless.de/classless.css">
+  </head>
+  <body class="dark-theme">
+    <header class="header">
+      <h1>Research Papers Explorer - Notes</h1>
+    </header>
+
+    <section class="notes-container">
+      <h2>Approaches</h2>
+      <ul>
+        <li>
+          <strong>Dynamic Filtering:</strong> Implemented multiple filter options (author, title, year range) using JavaScript functions to dynamically filter research papers based on user input.
+        </li>
+        <li>
+          <strong>Search Functionality:</strong> Added a general search input that performs case-insensitive searches across all fields of the research paper dataset.
+        </li>
+        <li>
+          <strong>Dynamic Data Rendering:</strong> Used JavaScript to dynamically create and render research paper cards from the JSON dataset.
+        </li>
+        <li>
+          <strong>Read More Feature:</strong> Designed a toggle feature for the abstract field to show truncated content with a "Read more" link, expanding to the full text when clicked.
+        </li>
+        <li>
+          <strong>Dark Theme and Styling:</strong> Adopted a modern dark theme with a focus on accessibility and aesthetics. Used consistent spacing, borders, and typography to enhance readability.
+        </li>
+        <li>
+          <strong>Export Filtered Data:</strong> Provided functionality to export filtered research paper data into a downloadable JSON file.
+        </li>
+      </ul>
+
+      <h2>Challenges</h2>
+      <ul>
+        <li>
+          <strong>Author Filter Bug:</strong> Initially, the author filter was not functioning because the incorrect field (`paper.author`) was referenced instead of `paper.authors`. This was fixed by updating the field reference.
+        </li>
+        <li>
+          <strong>Efficient Filtering:</strong> Combining multiple filters (author, title, year range) posed a challenge. It was resolved by chaining logical conditions within the filter function.
+        </li>
+        <li>
+          <strong>Abstract Handling:</strong> Displaying long abstracts concisely required implementing a "Read more" toggle while ensuring a smooth user experience. Adding event listeners dynamically to each card was initially problematic but resolved using inline `onclick` attributes.
+        </li>
+        <li>
+          <strong>Styling Consistency:</strong> Balancing aesthetic design with readability in a dark theme required iterative testing of color schemes, font sizes, and spacing.
+        </li>
+        
+      </ul>
+
+     
+  </body>
+</html>

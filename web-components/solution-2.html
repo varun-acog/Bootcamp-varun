@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Widget - Page 2</title>
+    <script type="module" src="weather.js" defer></script>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #87ceeb, #ffffff);
+        color: #333;
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: #004e89;
+        margin-bottom: 20px;
+      }
+
+      form {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 250px;
+      }
+
+      button {
+        background-color: #004e89;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #007bff;
+      }
+
+      city-weather {
+        margin: 20px 0;
+      }
+      a {
+        margin: 50px;
+        display: block;
+        border: 2px solid;
+        padding: 10px;
+        border-radius: 7px;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #004e89;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Weather Forecast</h1>
+    <city-weather></city-weather>
+    <form id="city-form">
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Enter a city name"
+        required
+      />
+      <button type="submit">Update Weather</button>
+    </form>
+    <a href="./solution-1.html">Back to Page-1</a>
+    <script>
+      const form = document.getElementById("city-form");
+      const cityInput = document.getElementById("city-input");
+      const weatherWidget = document.querySelector("city-weather");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const city = cityInput.value.trim();
+        if (city) {
+          weatherWidget.setAttribute("city", city);
+        }
+      });
+    </script>
+  </body>
+</html>

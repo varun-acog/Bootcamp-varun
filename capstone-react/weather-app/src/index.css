@@ -1,0 +1,18 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensuring the body takes full height and width */
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff; /* Light background color */
+}
+
+/* Optional: Override any default Tailwind styles */
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,106 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
+    background-color: #121212;
+  }
+  
+  .header {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
+    width: 40%;
+  }
+  
+  .filters {
+    padding: 1rem 2rem;
+    background-color: #1f1f1f;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .filter-group label {
+    color: #ccc;
+  }
+  
+  .filter-group input,
+  button {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card h3 {
+    color: #4caf50;
+    font-size: 1.2rem;
+  }
+  
+  .card .author {
+    color: #f0c37e;
+    font-weight: bold;
+  }
+  
+  .card .title {
+    color: #00bcd4;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card p {
+    color: #bbb;
+    line-height: 1.5;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #333;
+  }
+  
+  .read-more {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .read-more:hover {
+    color: #0056b3;
+  }
+  

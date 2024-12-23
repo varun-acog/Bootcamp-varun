@@ -4,107 +4,267 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootcamp-Varun</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Modern CSS Reset */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --color-primary: #6366f1;
+        --color-secondary: #818cf8;
+        --color-background: #0f172a;
+        --color-text: #f8fafc;
+        --color-text-muted: #94a3b8;
+        --card-gradient: linear-gradient(45deg, #3b82f6, #8b5cf6);
+        --card-hover-gradient: linear-gradient(45deg, #2563eb, #7c3aed);
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        background-color: var(--color-background);
+        color: var(--color-text);
+        line-height: 1.5;
+      }
+
+      .hero {
+        min-height: 100vh;
+        padding: 2rem 0;
+        background: radial-gradient(
+          circle at top right,
+          #1e293b 0%,
+          #0f172a 100%
+        );
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 4rem;
+        padding-top: 2rem;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, #60a5fa, #a78bfa);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .subtitle {
+        font-size: 1.25rem;
+        color: var(--color-text-muted);
+        margin-bottom: 2rem;
+      }
+
+      .github-button {
+        display: inline-block;
+        padding: 0.75rem 2rem;
+        background: var(--card-gradient);
+        color: var(--color-text);
+        text-decoration: none;
+        border-radius: 9999px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: none;
+      }
+
+      .github-button:hover {
+        background: var(--card-hover-gradient);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -10px rgba(99, 102, 241, 0.5);
+      }
+
+      .exercises-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem 0;
+      }
+
+      .exercise-card {
+        position: relative;
+        border-radius: 1rem;
+        overflow: hidden;
+      }
+
+      .exercise-card a {
+        display: block;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--color-text);
+        text-decoration: none;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+      }
+
+      .exercise-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--card-gradient);
+        opacity: 0.1;
+        transition: opacity 0.3s ease;
+      }
+
+      .exercise-card:hover::before {
+        opacity: 0.2;
+      }
+
+      .exercise-card:hover a {
+        transform: translateY(-5px);
+      }
+
+      .day {
+        display: inline-block;
+        padding: 0.25rem 1rem;
+        background: rgba(99, 102, 241, 0.1);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        color: var(--color-secondary);
+        margin-bottom: 1rem;
+      }
+
+      .exercise-card h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .card-overlay {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at top right,
+          rgba(99, 102, 241, 0.1),
+          transparent 70%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .exercise-card:hover .card-overlay {
+        opacity: 1;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero {
+          padding: 1rem 0;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .container {
+          padding: 0 1rem;
+        }
+
+        .exercises-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Arial", sans-serif;
-      line-height: 1.6;
-      background: linear-gradient(120deg, #e0c3fc, #8ec5fc) fill;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-
-    h1,
-    h3 {
-      color: #444;
-    }
-
-    a {
-      text-decoration: none;
-      color: #0073e6;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      color: #005bb5;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      color: #222;
-    }
-
-    h3 a {
-      font-size: 1.2rem;
-      color: #0073e6;
-    }
-
-    section {
-      margin-top: 20px;
-      width: 100%;
-      max-width: 800px;
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    section h3 {
-      margin-bottom: 10px;
-    }
-
-    section h3 a {
-      display: block;
-      padding: 10px;
-      border-radius: 5px;
-      background: #f9f9f9;
-      transition: all 0.3s ease-in-out;
-    }
-
-    section h3 a:hover {
-      background: #0073e6;
-      color: white;
-    }
-  </style>
   <body>
-    <h1>Bootcamp-Varun</h1>
-    <h3>
-      <a href="https://github.com/varun-acog/Bootcamp-varun">Git Repository</a>
-    </h3>
-    <section id="top-section">
-      <h3><a href="html-css/index.html">HTML-CSS(Day-1)</a></h3>
-      <h3><a href="design/index.html">Design(Day-2)</a></h3>
-      <h3><a href="design-review/index.html">Design-Review(Day-3)</a></h3>
-      <h3>
-        <a href="programming-basics/index.html">Programming-Basics(Day-4)</a>
-      </h3>
-      <h3>
-        <a href="frontend-programming/index.html"
-          >Front-end-Programming(Day-5)</a
-        >
-      </h3>
-      <h3><a href="basic-capstone/index.html">Basic-Capstone(Day-6)</a></h3>
-      <h3><a href="web-components/index.html">Web Components(Day-7)</a></h3>
-      <h3>
-        <a href="static-site-generation/index.html"
-          >E-commerce website(Day-7)</a
-        >
-      </h3>
-    </section>
+    <div class="hero">
+      <div class="container">
+        <header>
+          <h1>Bootcamp-Varun</h1>
+          <p class="subtitle">A Journey Through Web Development</p>
+          <a
+            href="https://github.com/varun-acog/Bootcamp-varun"
+            class="github-button"
+          >
+            View on GitHub
+          </a>
+        </header>
+
+        <main class="exercises-grid">
+          <article class="exercise-card" data-day="1">
+            <a href="html-css/index.html">
+              <span class="day">Day 1</span>
+              <h2>HTML-CSS</h2>
+              <div class="card-overlay"></div>
+            </a>
+          </article>
+
+          <article class="exercise-card" data-day="2">
+            <a href="design/index.html">
+              <span class="day">Day 2</span>
+              <h2>Design</h2>
+              <div class="card-overlay"></div>
+            </a>
+          </article>
+
+          <article class="exercise-card" data-day="3">
+            <a href="design-review/index.html">
+              <span class="day">Day 3</span>
+              <h2>Design Review</h2>
+              <div class="card-overlay"></div>
+            </a>
+          </article>
+
+          <article class="exercise-card" data-day="4">
+            <a href="programming-basics/index.html">
+              <span class="day">Day 4</span>
+              <h2>Programming Basics</h2>
+              <div class="card-overlay"></div>
+            </a>
+          </article>
+
+          <article class="exercise-card" data-day="5">
+            <a href="frontend-programming/index.html">
+              <span class="day">Day 5</span>
+              <h2>Front-end Programming</h2>
+              <div class="card-overlay"></div>
+            </a>
+          </article>
+
+          <article class="exercise-card" data-day="6">
+            <a href="basic-capstone/index.html">
+              <span class="day">Day 6</span>
+              <h2>Basic Capstone</h2>
+              <div class="card-overlay"></div>
+            </a>
+          </article>
+
+          <article class="exercise-card" data-day="7">
+            <a href="web-components/index.html">
+              <span class="day">Day 7</span>
+              <h2>Web Components</h2>
+              <div class="card-overlay"></div>
+            </a>
+          </article>
+
+          <article class="exercise-card" data-day="7">
+            <a href="static-site-generation/index.html">
+              <span class="day">Day 7</span>
+              <h2>E-commerce Website</h2>
+              <div class="card-overlay"></div>
+            </a>
+          </article>
+        </main>
+      </div>
+    </div>
   </body>
 </html>

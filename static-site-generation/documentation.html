@@ -171,51 +171,6 @@
             static site and re-upload the new files.
           </li>
         </ul>
-        <p class="note">
-          <strong>Note:</strong> For highly dynamic content (e.g., user reviews,
-          prices), static generation may not be the best solution, and
-          server-side rendering or API-based approaches might be more
-          appropriate.
-        </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Example Implementation</h2>
-      <div class="content">
-        <p>
-          Below is an example of how we might generate a product page using
-          HTML, CSS, JavaScript, and JSON data:
-        </p>
-        <div class="example-code">
-          <code>
-            &lt;!DOCTYPE html&gt;<br />
-            &lt;html&gt;<br />
-            &lt;head&gt;<br />
-            &nbsp;&nbsp;&lt;title&gt;Product Page&lt;/title&gt;<br />
-            &lt;/head&gt;<br />
-            &lt;body&gt;<br />
-            &nbsp;&nbsp;&lt;h1&gt;Product Name&lt;/h1&gt;<br />
-            &nbsp;&nbsp;&lt;div id="product-list"&gt;&lt;/div&gt;<br />
-            &nbsp;&nbsp;&lt;script src="data.js"&gt;&lt;/script&gt;<br />
-            &nbsp;&nbsp;&lt;script&gt;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;let productList =
-            JSON.parse(productData);<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;let productContainer =
-            document.getElementById("product-list");<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;productList.forEach(product =&gt; {<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let productElement =
-            document.createElement("div");<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productElement.innerHTML =
-            `<strong>${product.name}</strong><br />
-            Price: ${product.price}`;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productContainer.appendChild(productElement);<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;});<br />
-            &nbsp;&nbsp;&lt;/script&gt;<br />
-            &lt;/body&gt;<br />
-            &lt;/html&gt;
-          </code>
-        </div>
       </div>
     </section>
 

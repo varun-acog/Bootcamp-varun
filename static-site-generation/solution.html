@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static E-commerce Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Flipazon</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h1>Welcome to Flipazon</h1>
+        <p>
+          Your go to place for shopping all your favourites with wide range of
+          collection!
+        </p>
+        <button id="shopNow">Shop Now</button>
+      </div>
+    </section>
+
+    <div class="container" id="products">
+      <aside>
+        <div class="search-bar">
+          <input id="searchBar" type="text" placeholder="Search products..." />
+          <div id="autocomplete" class="autocomplete-suggestions"></div>
+        </div>
+
+        <select id="filterBrand">
+          <option value="">All Brands</option>
+        </select>
+
+        <div class="price-filter">
+          <span id="priceRange">Price Range</span>
+          <hr />
+          <input id="minPrice" type="number" placeholder="Min Price" />
+          <input id="maxPrice" type="number" placeholder="Max Price" />
+        </div>
+
+        <select id="sortPrice">
+          <option value="">Sort by Price</option>
+          <option value="asc">Price: Low to High</option>
+          <option value="desc">Price: High to Low</option>
+        </select>
+
+        <div id="categoryFilter">
+          <h4>Category</h4>
+          <hr />
+          <!-- Categories will be dynamically populated here -->
+        </div>
+
+        <div id="ratingFilter">
+          <h4>Rating</h4>
+          <input
+            type="range"
+            id="filterRating"
+            min="1"
+            max="5"
+            step="0.1"
+            value="1"
+          />
+          <span id="ratingValue">Min Rating: 1</span>
+        </div>
+
+        <button id="clearFilters" class="clear-filters">Clear Filters</button>
+      </aside>
+
+      <main id="productGrid" class="grid">
+        <!-- Products will be dynamically loaded here -->
+      </main>
+    </div>
+
+    <div class="pagination">
+      <button id="prevPage">Previous</button>
+      <span id="currentPage">1</span>
+      <button id="nextPage">Next</button>
+    </div>
+
+    <footer id="footer">
+      <h2>Contact Us</h2>
+      <p>Email: support@ecommerce.com</p>
+      <p>Phone: +123 456 7890</p>
+      <p>Address: 123 E-commerce St., Shop City</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

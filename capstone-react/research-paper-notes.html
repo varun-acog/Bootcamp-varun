@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Paper Explorer Notes</title>
+    <link rel="stylesheet" href="https://classless.de/classless.css" />
+  </head>
+  <body>
+    <a href="/index.html">Back to Home Page </a>
+    <h1>Research Paper Explorer (Using React)</h1>
+
+    <h2>Overview</h2>
+    <p>
+      A Research Paper Explorer application built using React and Vite with
+      vanilla CSS styling. The app allows users to search, filter, and export
+      research papers based on various criteria.
+    </p>
+
+    <h2>Features</h2>
+    <ul>
+      <li>Search research papers by any field.</li>
+      <li>Filter by author, title, and year range.</li>
+      <li>Export filtered papers as a JSON file.</li>
+      <li>Read more/less functionality for paper abstracts.</li>
+    </ul>
+
+    <h2>File Structure</h2>
+    <pre>
+  src/
+  ├── App.jsx               # Main application component
+  ├── components/
+  │   ├── Header.jsx        # Header component with search functionality
+  │   ├── Filters.jsx       # Filters for author, title, and year
+  │   ├── PaperCard.jsx     # Individual card for each research paper
+  ├── styles/
+  │   └── styles.css        # Vanilla CSS for styling
+  ├── assets/
+  │   └── data.json         # Research papers data
+  └── main.jsx              # Entry point for the React app
+  </pre
+    >
+
+    <h2>Key Components</h2>
+    <h3>App.jsx</h3>
+    <ul>
+      <li>Manages state for papers and filtered results.</li>
+      <li>Handles search, filters, and data export functionality.</li>
+    </ul>
+
+    <h3>Header.jsx</h3>
+    <ul>
+      <li>Renders the application title and search bar.</li>
+      <li>Passes search query to the parent component.</li>
+    </ul>
+
+    <h3>Filters.jsx</h3>
+    <ul>
+      <li>Provides inputs for filtering by author, title, and year.</li>
+      <li>Triggers filtering logic in the parent component.</li>
+      <li>Includes an export button for filtered data.</li>
+    </ul>
+
+    <h3>PaperCard.jsx</h3>
+    <ul>
+      <li>
+        Displays paper details like title, author, venue, year, ID, and
+        abstract.
+      </li>
+      <li>Implements read more/less toggle for abstracts.</li>
+    </ul>
+
+    <h2>Styling</h2>
+    <p>Vanilla CSS for dark-themed styling with a responsive layout:</p>
+    <ul>
+      <li>Modern design with flexbox for layout.</li>
+      <li>Dark background, light text, and contrasting highlights.</li>
+      <li>Interactive elements with hover effects.</li>
+    </ul>
+
+    <h2>Setup and Run</h2>
+    <ol>
+      <li>
+        Create a Vite React project:
+        <code
+          >npm create vite@latest research-paper-explorer --template react</code
+        >
+      </li>
+      <li>Install dependencies: <code>npm install</code></li>
+      <li>Place files as per the structure above.</li>
+      <li>Run the app: <code>npm run dev</code></li>
+    </ol>
+
+    <h2>Data Format (data.json)</h2>
+    <pre>
+  [
+    {
+      "id": "1",
+      "title": "Sample Paper",
+      "authors": "Author Name",
+      "venue": "Conference Name",
+      "year": 2023,
+      "abstract": "This is a sample abstract for the research paper."
+    },
+    ...
+  ]
+  </pre
+    >
+
+    <h2>Export Functionality</h2>
+    <p>
+      Generates a downloadable JSON file containing filtered research paper
+      data.
+    </p>
+
+    <h2>Run Command</h2>
+    <p>To start the development server:</p>
+    <code>npm run dev</code>
+
+    <h2>Summary</h2>
+    <p>
+      The Research Paper Explorer demonstrates efficient management of data and
+      UI using React and Vite. Its modular components make it maintainable, and
+      its functionality is user-focused.
+    </p>
+  </body>
+</html>

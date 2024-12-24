@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes - ReactJS Weather App</title>
+    <link rel="stylesheet" href="https://classless.de/classless.css" />
+  </head>
+  <body>
+    <a href="/index.html">Back to Home Page</a>
+    <h1>ReactJS Weather App Notes</h1>
+    <h2>Project Overview</h2>
+    <p>
+      A weather app built with ReactJS, styled using Tailwind CSS, and enhanced
+      with ShadCN UI components.
+    </p>
+
+    <h2>Steps to Build</h2>
+    <ol>
+      <li>
+        <strong>Set Up React App:</strong> Create a React app using
+        <code>npx create-react-app weather-app</code>.
+      </li>
+      <li>
+        <strong>Install Tailwind CSS:</strong>
+        <ul>
+          <li>
+            Install Tailwind:
+            <code>npm install tailwindcss postcss autoprefixer</code>
+          </li>
+          <li>Initialize: <code>npx tailwindcss init</code></li>
+          <li>
+            Add Tailwind directives to <code>src/index.css</code>:
+            <pre>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+          </pre
+            >
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Add ShadCN Components:</strong> Install ShadCN:
+        <code>npm install @shadcn/ui</code>.
+      </li>
+      <li>
+        <strong>Update Tailwind Config:</strong> Modify
+        <code>tailwind.config.js</code>:
+        <pre>
+module.exports = {
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+  theme: { extend: {} },
+  plugins: [],
+};
+      </pre
+        >
+      </li>
+      <li>
+        <strong>Create Components:</strong>
+        <ul>
+          <li>
+            <strong>App.js:</strong> Manages city input and renders
+            <code>CityWeather</code>. Uses ShadCN's <code>Button</code> and
+            <code>Input</code>.
+          </li>
+          <li>
+            <strong>CityWeather.js:</strong> Displays the city name and
+            temperature. Simulates fetching weather data with
+            <code>useEffect</code>.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Running the App</h2>
+    <p>Start the app using <code>npm start</code>.</p>
+
+    <h2>Key Features</h2>
+    <ul>
+      <li>
+        Real-time weather data simulation using <code>useState</code> and
+        <code>useEffect</code>.
+      </li>
+      <li>Tailwind CSS for modern and responsive styling.</li>
+      <li>ShadCN UI components for enhanced user experience.</li>
+    </ul>
+  </body>
+</html>

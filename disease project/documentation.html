@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Notes - Disease Target Identification</title>
+    <link rel="stylesheet" href="https://classless.de/classless.css" />
+  </head>
+  <body>
+    <h1>Disease Explorer Documentation</h1>
+
+    <div class="section">
+      <h2>Approach</h2>
+      <ul>
+        <li>
+          Used React with TypeScript for type safety and better development
+          experience
+        </li>
+        <li>
+          Implementation:
+          <ul>
+            <li>Components for UI elements</li>
+            <li>Hooks for data fetching and state management</li>
+            <li>Services for API interactions</li>
+            <li>Utils for shared functionality</li>
+            <li>Types for TypeScript definitions</li>
+          </ul>
+        </li>
+        <li>
+          Utilized TanStack Query (React Query) for efficient data fetching and
+          caching
+        </li>
+        <li>Implemented responsive design using Tailwind CSS</li>
+        <li>
+          Used Lucide React for consistent iconography (***This is a new
+          learning***)
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Technical Challenges</h2>
+      <ul>
+        <li>
+          <strong>API Integration:</strong> Handling complex responses from the
+          OLS API and ensuring type safety
+        </li>
+        <li>
+          <strong>Data Deduplication:</strong> Removing duplicate disease
+          entries from search results while preserving the most relevant
+          information
+        </li>
+        <li>
+          <strong>State Management:</strong> Managing the selected disease state
+          and its hierarchy data efficiently
+        </li>
+        <li>
+          <strong>Performance:</strong> Implementing proper caching strategies
+          to minimize API calls
+        </li>
+        <li>
+          <strong>Type Safety:</strong> Ensuring comprehensive TypeScript
+          coverage across the application
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Solutions Implemented</h2>
+      <ul>
+        <li>Created utility functions for disease data deduplication</li>
+        <li>Used TypeScript interfaces for API response types</li>
+        <li>Created reusable components for common UI elements</li>
+        <li>Implemented error boundaries and loading states</li>
+      </ul>
+    </div>
+  </body>
+</html>

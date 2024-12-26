@@ -20,9 +20,16 @@ export default function App() {
     setSelectedDisease(null);
   };
 
+  const handleBack = () => {
+    setSearchQuery('');
+    setSelectedDisease(null);
+  };
+
+  const showBackButton = searchQuery.length > 0 || selectedDisease !== null;
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
+      <Header showBackButton={showBackButton} onBack={handleBack} />
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="space-y-8">
           <div className="flex justify-center">
@@ -46,6 +53,7 @@ export default function App() {
             isSearching={isSearching}
             searchQuery={searchQuery}
             onSelectDisease={setSelectedDisease}
+            onBackToExplore={handleBack}
           />
         </div>
       </main>

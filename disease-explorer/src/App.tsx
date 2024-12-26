@@ -6,6 +6,7 @@ import { Header } from './components/Header';
 import { SearchResults } from './components/SearchResults';
 import { useSearchDiseases } from './hooks/useSearchDiseases';
 import { useDiseaseHierarchy } from './hooks/useDiseaseHierarchy';
+import { DiseaseExplorer } from './components/DiseaseExplorer';
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -13,6 +14,11 @@ export default function App() {
 
   const { data: diseases, isLoading: isSearching } = useSearchDiseases(searchQuery);
   const { data: hierarchyData } = useDiseaseHierarchy(selectedDisease);
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    setSelectedDisease(null);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -26,6 +32,10 @@ export default function App() {
               onSearch={() => {}}
             />
           </div>
+
+          {!searchQuery && !selectedDisease && (
+            <DiseaseExplorer onSearch={handleSearch} />
+          )}
 
           {selectedDisease && hierarchyData && (
             <DiseaseHierarchy hierarchy={hierarchyData} />

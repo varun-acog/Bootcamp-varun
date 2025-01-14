@@ -1,4 +1,4 @@
-# Annotation System Project
+# ASSIGNMENT-2: Annotation System Project
 ## Problem Definition
 Modern data visualization and annotation systems require flexibility and user interactivity. Current solutions often lack composability, extensibility, and integration of annotations. We aim to build a prototype that allows authenticated users to view data (graphs, tables, or text), interact with components described in JSON, and add annotations for collaboration and insights.
 

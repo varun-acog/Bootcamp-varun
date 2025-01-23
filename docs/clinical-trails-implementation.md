@@ -65,7 +65,7 @@ The goal of this project is to create a web-based interface for querying and dis
 
 ---
 
-## Developer Guide
+## Project Guide
 
 ### Prerequisites
 
@@ -152,6 +152,37 @@ The goal of this project is to create a web-based interface for querying and dis
 ### Pagination and Sorting
 - Navigate between pages using the pagination controls.
 - Sort results by clicking on column headers.
+
+---
+
+## Roles and Responsibilities
+### Shifath:
+
+* Integrated the ClinicalTrials.gov API.
+
+* Developed the logic for applying filters (study title, NCT ID, status, interventions, sponsors, study type, phase, sex).
+
+* Optimized API queries for performance.
+
+* Developed the logic for managing columns.
+
+* Designed the hero section for the landing page.
+
+* Added search suggestions for conditions and interventions using ClinicalTrails API.
+
+### Varun:
+
+* Designed and implemented the UI using React and styled-components.
+
+* Developed core components such as the SearchBar and ToggleButton.
+
+* Created reusable components like SearchBar, FilterPanel, and DataTable.
+
+* Managed component publishing and ensured responsiveness.
+
+* Implemented data fetching from the ClinicalTrials.gov API and displayed it in a structured format.
+
+* Implemented the search in table functionality.
 
 ---
 
